@@ -25,24 +25,35 @@
       <div class="bio">
         <img class="portrait" src="1772602164170.png" width="140" height="140" alt="Yuhao Bao">
         <div>
-          <p>I am a senior in Computer Science at Brigham Young University, with minors in Mathematics and Physics, graduating April 2027.</p>
-          <p>I have been a research assistant in Prof. Amanda Hughes's HCI research group since November 2023.</p>
-          <p>My interests are human-centered AI reliability and evaluation, especially how AI models interpret crisis-related social media.</p>
-          <p>I am applying to PhD programs for Fall 2027.</p>
+          <p>I study how to evaluate AI systems used in high-stakes settings, so that people can tell when a model's output should not be trusted. My current work looks at how vision-language and large language models interpret crisis-related social media, and how their outputs compare with human annotations.</p>
+          <p>In my ISCRAM 2026 paper, adding a post's text to its image improved caption accuracy but also introduced text-driven errors. In my current manuscript on Hurricane Dorian tweets, five model versions reached similar overall agreement with historical labels, yet that agreement hid systematic differences: all five rated the three tweets labeled Critical as Low or Medium.</p>
+          <p>I am a senior in Computer Science at Brigham Young University, with minors in Mathematics and Physics, graduating April 2027. I have been a research assistant in Prof. Amanda Hughes's HCI research group since November 2023.</p>
+          <p>I am applying to PhD programs for Fall 2027 and will be at CSCW 2026 in Salt Lake City, October 12–14.</p>
         </div>
       </div>
 
       <section aria-labelledby="publication-heading">
-        <h2 id="publication-heading">Publication</h2>
-        <p>Yuhao Bao and Amanda Hughes. <a href="https://doi.org/10.59297/4bar0c32">"When Social Media Images Need Words: Measuring Context Gap and Fusion Tax in Crisis Image Captioning."</a> <em>Proceedings of the International ISCRAM Conference</em>, 2026. Work-in-Progress paper.</p>
+        <h2 id="publication-heading">Publications and manuscripts</h2>
+        <ul class="entries">
+          <li><strong>Yuhao Bao</strong> and Amanda Hughes. "When Social Media Images Need Words: Measuring Context Gap and Fusion Tax in Crisis Image Captioning." <em>Proceedings of the International ISCRAM Conference</em>, 2026. Work-in-Progress paper. [<a href="https://doi.org/10.59297/4bar0c32">DOI</a>]</li>
+          <li><strong>Yuhao Bao</strong>. "What Agreement Hides: LLM Labeling of Hurricane Dorian Tweets" (working title). In preparation.</li>
+        </ul>
       </section>
 
       <section aria-labelledby="research-heading">
-        <h2 id="research-heading">Research and projects</h2>
-        <ul class="projects">
-          <li>Multimodal annotation of Hurricane Dorian tweets (first-author manuscript, in preparation for ISCRAM 2027). Five model versions from three families labeled 355 tweets with 433 photos; Priority agreement with historical TREC-IS labels ranged from 39.2% to 50.1%, and all five rated the three Critical-reference tweets as Low or Medium. These results measure agreement with historical labels, not correctness.</li>
-          <li>Text-to-SQL with retrieval and LoRA fine-tuning (Qwen3.5-9B, BM25), with Prof. Porter Jenkins, Fall 2025 – Winter 2026.</li>
-          <li><a href="https://github.com/yuranb/modelagree">modelagree</a>, an open-source tool for measuring agreement between LLM labels (under development).</li>
+        <h2 id="research-heading">Research</h2>
+        <ul class="entries">
+          <li><strong>LLM labeling of crisis tweets</strong> (manuscript in preparation). I compared five model versions from three families on 355 Hurricane Dorian tweets with 433 photos against historical TREC-IS labels. Priority agreement ranged from 39.2% to 50.1%, GPT-6 Sol assigned Medium to 77.2% of tweets, and all five rated the three Critical-labeled tweets as Low or Medium. These figures measure agreement with historical labels, not correctness.</li>
+          <li><strong>Crisis image captioning</strong> (ISCRAM 2026). I compared Gemini 2.0 Flash, Qwen2.5-VL, and BLIP on 204 CrisisFACTS image-post pairs, with and without the post text. I designed the scoring rubric and error taxonomy and carried out the human coding (Krippendorff's α = 0.69). Adding post text raised Gemini's caption accuracy from 75.5% to 91.7%.</li>
+          <li><strong>Text-to-SQL with retrieval and LoRA</strong>, with Prof. Porter Jenkins, Fall 2025 – Winter 2026. On Qwen3.5-9B with BM25 retrieval, Shadow-LoRA raised exact match from 19.47% to 30.49%.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="software-heading">
+        <h2 id="software-heading">Open-source projects</h2>
+        <ul class="entries">
+          <li><a href="https://github.com/yuranb/modelagree">modelagree</a>: a tool for measuring agreement between LLM labels, with each other and with human references (under development).</li>
+          <li><a href="https://github.com/yuranb/crisis-tweet-classifier">crisis-tweet-classifier</a>: compares TF-IDF with logistic regression, fine-tuned DistilBERT, and a zero-shot local LLM (qwen2.5:7b) on the HumAID crisis-tweet dataset, split by disaster event, reporting accuracy, calibration, and cost. On the same 300 test tweets, DistilBERT reached macro-F1 0.78 versus 0.61 for the zero-shot model.</li>
         </ul>
       </section>
     </main>

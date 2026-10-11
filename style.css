@@ -82,12 +82,12 @@ a:focus-visible {
   margin-bottom: 0;
 }
 
-.projects {
+.entries {
   margin: 0;
   padding-left: 1.25rem;
 }
 
-.projects li + li {
+.entries li + li {
   margin-top: 0.75rem;
 }
 
