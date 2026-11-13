@@ -26,7 +26,7 @@
         <img class="portrait" src="1772602164170.png" width="140" height="140" alt="Yuhao Bao">
         <div>
           <p>I study how to evaluate AI systems used in high-stakes settings, so that people can tell when a model's output should not be trusted. My current work looks at how vision-language and large language models interpret crisis-related social media, and how their outputs compare with human annotations.</p>
-          <p>In my ISCRAM 2026 paper, adding a post's text to its image improved caption accuracy but also introduced text-driven errors. In my current manuscript on Hurricane Dorian tweets, five model versions reached similar overall agreement with historical labels, yet that agreement hid systematic differences: all five rated the three tweets labeled Critical as Low or Medium.</p>
+          <p>In my ISCRAM 2026 paper, adding a post's text to its image improved caption accuracy but also introduced text-driven errors. In my current manuscript on Hurricane Dorian tweets, six model versions reached similar overall agreement with historical labels, yet that agreement hid which way labels moved after an update, and none rated the three tweets labeled Critical as Critical when given the photos.</p>
           <p>I am a senior in Computer Science at Brigham Young University, with minors in Mathematics and Physics, graduating April 2027. I have been a research assistant in Prof. Amanda Hughes's HCI research group since November 2023.</p>
           <p>I am applying to PhD programs for Fall 2027.</p>
         </div>
@@ -36,16 +36,16 @@
         <h2 id="publication-heading">Publications and manuscripts</h2>
         <ul class="entries">
           <li><strong>Yuhao Bao</strong> and Amanda Hughes. "When Social Media Images Need Words: Measuring Context Gap and Fusion Tax in Crisis Image Captioning." <em>Proceedings of the International ISCRAM Conference</em>, 2026. Work-in-Progress paper. [<a href="https://doi.org/10.59297/4bar0c32">DOI</a>]</li>
-          <li><strong>Yuhao Bao</strong>. "What Agreement Hides: LLM Labeling of Hurricane Dorian Tweets" (working title). In preparation.</li>
+          <li><strong>Yuhao Bao</strong> and Amanda L. Hughes. "Same Tweets, Different Labels: Version Updates and Rerun Variation in LLM Urgency Labeling of Hurricane Dorian Tweets" (working title). In preparation.</li>
         </ul>
       </section>
 
       <section aria-labelledby="research-heading">
         <h2 id="research-heading">Research</h2>
         <ul class="entries">
-          <li><strong>LLM labeling of crisis tweets</strong> (manuscript in preparation). I compared five model versions from three families on 355 Hurricane Dorian tweets with 433 photos against historical TREC-IS labels. Priority agreement ranged from 39.2% to 50.1%, GPT-6 Sol assigned Medium to 77.2% of tweets, and all five rated the three Critical-labeled tweets as Low or Medium. These figures measure agreement with historical labels, not correctness.</li>
+          <li><strong>LLM labeling of crisis tweets</strong> (manuscript in preparation). I compared six model versions from three families on 367 Hurricane Dorian tweets with 449 photos against historical TREC-IS labels, with and without the photos, three runs each. In every family the newer version raised more urgency labels than it lowered, and repeated runs of the same version also changed labels. These comparisons measure agreement with historical labels, not correctness.</li>
           <li><strong>Crisis image captioning</strong> (ISCRAM 2026). I compared Gemini 2.0 Flash, Qwen2.5-VL, and BLIP on 204 CrisisFACTS image-post pairs, with and without the post text. I designed the scoring rubric and error taxonomy and carried out the human coding (Krippendorff's α = 0.69). Adding post text raised Gemini's caption accuracy from 75.5% to 91.7%.</li>
-          <li><strong>Text-to-SQL with retrieval and LoRA</strong>, with Prof. Porter Jenkins, Fall 2025 – Winter 2026. On Qwen3.5-9B with BM25 retrieval, Shadow-LoRA raised exact match from 19.47% to 30.49%.</li>
+          <li><strong>Text-to-SQL with retrieval and LoRA</strong>, with Prof. Porter Jenkins, Fall 2025 – Winter 2026. I worked on Text-to-SQL using retrieval and LoRA with Qwen3.5-9B. I tested Shadow-LoRA, reaching 30.49% exact match versus 19.47% for matched Direct-LoRA.</li>
         </ul>
       </section>
 
